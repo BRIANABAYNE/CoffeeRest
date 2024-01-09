@@ -40,19 +40,19 @@ struct ContentView: View {
                 .labelsHidden()
                 Text("Desired amount of sleep")
                     .font(.headline)
-                    .foregroundColor(Color(hue: 0.909, saturation: 1.0, brightness: 1.0, opacity: 0.309))
+                    .foregroundColor(Color(hue: 0.961, saturation: 0.916, brightness: 0.868, opacity: 0.902))
                     
                 
                 Stepper("\(sleepAmount.formatted()) hours", value: $sleepAmount, in: 4...12, step: 0.25)
                 
-                Text("Daily Coffee intake")
+                Text("Daily coffee intake")
                     .font(.headline)
                     .foregroundColor(Color(hue: 0.733, saturation: 1.0, brightness: 1.0))
                     
                 Stepper("\(coffeeAmount) cup(s)", value: $coffeeAmount, in: 1...20)
             }
             // title
-            .navigationTitle("Better Rest")
+            .navigationTitle("Better Rest").colorMultiply(.teal)
             .font(.footnote)
             .toolbar {
                 Button("Calculate", action: calculateBedtime)
